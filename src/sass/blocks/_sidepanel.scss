@@ -8,6 +8,15 @@
     align-items: center;
     height: 340px;
     z-index: 3;
+    &__link {
+        &:hover{
+            scale:1.25;
+            svg path {
+                fill: red;
+                
+            }
+        }
+    }
     &__divider {
        
         width: 2px;
@@ -23,4 +32,5 @@
             width: 150px;
         }
     }
+    
 }
