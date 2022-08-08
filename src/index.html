@@ -139,7 +139,20 @@
         <div class="container">
             <div class="about__wrapper">
                 <div class="about__photo">
-                    <img src="img/IMG_2238.JPG" alt="My photo" >
+                    <!--  this property img doesnot work
+                        srcset="img/IMG_2238-min.JPG 300w,
+                                img/IMG_2238.jpg 400w"
+                            sizes="(max-width: 576px) 280px,
+                                   (min-width: 577px) 400px" -->
+                    <!-- <img    
+                    src="img/IMG_2238.JPG" alt="My photo" > -->
+                    
+                    <picture>
+                        <!-- <source type="image/webp" srcset="img/main_photo.webp"> если хотим загрузить форматы которые не везде поддерживаются -->
+                        <source media="(max-width: 576px)" srcset="img/IMG_2238-min.JPG">
+                        <source media="(min-width: 577px)" srcset="img/IMG_2238.JPG">
+                        <img src="img/IMG_2238.JPG" alt="photo">
+                    </picture>
                 </div>
                 <div class="about__descr">
                     <h2 class="title title_fz16 about__title">Про меня</h2>
